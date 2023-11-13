@@ -29,3 +29,7 @@
 ```
 .../anaconda3/lib/python3.11/site-packages/paddleocr/ppocr/postprocess/db_postprocess.py
 ```
+
+## 联系方式
+* Wechat: Rivershi0111
+* Telegram: @River_Shi
