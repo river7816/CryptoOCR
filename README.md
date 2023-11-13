@@ -8,7 +8,7 @@
 
 ## 安装说明
 * 本项目基于Python3.10，如果你的Python版本不是3.10，那么你可能需要安装Python3.10
-* 首先需要安装PaddlePaddle和PaddleOCR，在网站[PaddleOCR 官网](https://www.paddlepaddle.org.cn/install/quick?docurl=/documentation/docs/zh/install/pip/linux-pip.html)查询对应的安装版本
+* 首先需要安装PaddlePaddle和PaddleOCR，在[PaddleOCR 官网](https://www.paddlepaddle.org.cn/install/quick?docurl=/documentation/docs/zh/install/pip/linux-pip.html)查询对应的安装版本
   * 本项目采用的PaddlePaddle版本为2.5.2，PaddleOCR版本为2.0.1，安装命令如下：
   ```angular2html
     python -m pip install paddlepaddle==2.5.2 -i https://pypi.tuna.tsinghua.edu.cn/simple
