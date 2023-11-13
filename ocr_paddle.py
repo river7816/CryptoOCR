@@ -8,7 +8,7 @@ det_model_dir = os.path.join(root_path, "./model/det_v4") # det_server_v4 精度
 rec_model_dir = os.path.join(root_path, "./model/rec_v4")
 cls_model_dir = os.path.join(root_path, "./model/cls")
 
-def text_from_image(img_path,on_server=False):
+def text_from_image(img_path,gpu_version=False):
     """OCR识别
     :param img_path: 图片路径,也可以是图片的二进制流
     :param on_server: 是否在服务器上运行
@@ -22,16 +22,16 @@ def text_from_image(img_path,on_server=False):
                     cls_model_dir=cls_model_dir,
                     show_log=False)  # need to run only once to download and load model into memory
     results = ocr.ocr(img_path, cls=True)
-    if on_server == False: # 我也不知道为什么，在不同的系统上返回的还不一样，真的离谱，本地选False，服务器选True
+    if gpu_version == False:
         output = [result[1][0] for result in results]
     else:
-        output = [result[1][0] for result in results[0]]
+        output = [result[1][0] for result in results[0]] # 如果安装的为gpu version
     return ' '.join(output)
 
 
 if __name__ == '__main__':
     start = time.time()
     img_path = 'test_photo/ACH.jpg'
-    print(text_from_image(img_path,on_server=False))
+    print(text_from_image(img_path,gpu_version=False))
     end = time.time()
     print(end-start)
